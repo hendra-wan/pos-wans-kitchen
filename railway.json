@@ -1,0 +1,10 @@
+{
+  "name": "pos-wans-kitchen-backend",
+  "services": [
+    {
+      "name": "backend",
+      "path": "backend",
+      "start": "node server.js"
+    }
+  ]
+}
