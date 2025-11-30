@@ -1,8 +1,12 @@
-
-import express from 'express';
+import express from "express";
 const app = express();
 app.use(express.json());
 
-app.get('/api/health', (req,res)=>res.json({status:'ok'}));
+app.get("/api/health", (req, res) => {
+  res.json({ status: "ok" });
+});
 
-app.listen(process.env.PORT || 4000, ()=>console.log('Backend running'));
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Backend running on port ${PORT}`);
+});
